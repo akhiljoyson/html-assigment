@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f2f2f2;
+}
+
+form{
+    width:400px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+
+h2{
+    text-align:center;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number]{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background-color:green;
+    color:white;
+    border:none;
+    font-size:16px;
+}
+</style>
+
+</head>
+
+<body>
+
+<form action="#" method="post">
+
+<h2>Registration Form</h2>
+
+<!-- Name -->
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+<!-- Email -->
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+<!-- Password -->
+<label for="password">Password</label>
+<input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+<!-- Gender -->
+<label>Gender</label><br>
+
+<input type="radio" id="male" name="gender" value="male" required>
+<label for="male">Male</label><br>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br><br>
+
+<!-- Hobbies -->
+<label>Hobbies</label><br>
+
+<input type="checkbox" id="reading" name="hobby">
+<label for="reading">Reading</label><br>
+
+<input type="checkbox" id="music" name="hobby">
+<label for="music">Music</label><br>
+
+<input type="checkbox" id="sports" name="hobby">
+<label for="sports">Sports</label><br><br>
+
+<!-- Age -->
+<label for="age">Age</label>
+<input type="number" id="age" name="age" placeholder="Enter your age" min="10" max="100" required>
+
+<!-- Submit -->
+<button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>
