@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Display and Position Assignment</title>
+
+<style>
+
+/* Task 1: Display Basics */
+
+.block div{
+display:block;
+background-color:lightblue;
+margin:5px;
+padding:5px;
+}
+
+.inline div{
+display:inline;
+background-color:lightgreen;
+margin:5px;
+padding:5px;
+}
+
+.inlineblock div{
+display:inline-block;
+background-color:orange;
+width:100px;
+height:50px;
+margin:5px;
+text-align:center;
+line-height:50px;
+}
+
+
+/* Task 2: Hidden Element */
+
+.hidden{
+display:none;
+}
+
+
+/* Task 3: Position Basics */
+
+.container{
+height:200px;
+border:2px solid black;
+margin-top:20px;
+position:relative;
+}
+
+.box{
+width:70px;
+height:70px;
+color:white;
+text-align:center;
+line-height:70px;
+}
+
+.static{
+background-color:gray;
+position:static;
+}
+
+.relative{
+background-color:blue;
+position:relative;
+left:20px;
+top:20px;
+}
+
+.absolute{
+background-color:red;
+position:absolute;
+bottom:0;
+right:0;
+}
+
+
+/* Task 4: Fixed & Sticky */
+
+.fixed-box{
+position:fixed;
+top:10px;
+right:10px;
+background-color:purple;
+color:white;
+padding:8px;
+}
+
+.sticky-header{
+position:sticky;
+top:0;
+background-color:black;
+color:white;
+padding:10px;
+}
+
+
+/* Task 5: Menu */
+
+.menu{
+display:none;
+background-color:lightgray;
+padding:10px;
+width:120px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Task 1: Display Block</h2>
+
+<div class="block">
+<div>First Div</div>
+<div>Second Div</div>
+<div>Third Div</div>
+</div>
+
+<p>display:block makes each div start on a new line.</p>
+
+
+<h2>Display Inline</h2>
+
+<div class="inline">
+<div>First Div</div>
+<div>Second Div</div>
+<div>Third Div</div>
+</div>
+
+<p>display:inline shows the div elements in the same line.</p>
+
+
+<h2>Display Inline-Block</h2>
+
+<div class="inlineblock">
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+</div>
+
+<p>inline-block keeps them in one line but allows width and height.</p>
+
+
+
+<h2>Task 2: Hidden Element</h2>
+
+<p class="hidden">This paragraph is hidden using display:none</p>
+
+
+
+<h2>Task 3: Position Basics</h2>
+
+<div class="container">
+
+<div class="box static">Static</div>
+
+<div class="box relative">Relative</div>
+
+<div class="box absolute">Absolute</div>
+
+</div>
+
+
+
+<div class="fixed-box">Fixed Box</div>
+
+
+
+<h2 class="sticky-header">Sticky Header</h2>
+
+<p>Scroll down to see sticky header working.</p>
+<p style="height:800px;">Extra space for scrolling</p>
+
+
+
+<h2>Task 5: Menu Toggle</h2>
+
+<button onclick="toggleMenu()">Menu</button>
+
+<div id="menu" class="menu">
+<p>Home</p>
+<p>About</p>
+<p>Contact</p>
+</div>
+
+
+
+<script>
+
+function toggleMenu(){
+
+var menu=document.getElementById("menu");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}else{
+menu.style.display="block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
