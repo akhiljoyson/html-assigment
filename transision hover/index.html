@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transition and Hover Task</title>
+
+<style>
+
+/* Page Style */
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+/* Common box style */
+.box{
+    width: 200px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: lightblue;
+    border: 2px solid blue;
+    transition: all 0.4s ease;
+}
+
+/* 1️⃣ Basic Hover Color Change */
+.color-change:hover{
+    background-color: orange;
+}
+
+/* 2️⃣ Grow Element on Hover */
+.grow:hover{
+    transform: scale(1.2);
+}
+
+/* 3️⃣ Change Color, Size, and Shadow */
+.multi-hover:hover{
+    background-color: purple;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px gray;
+}
+
+/* 4️⃣ Reveal Content with Opacity */
+.reveal{
+    position: relative;
+}
+
+.hidden-text{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.reveal:hover .hidden-text{
+    opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CSS Transition & Hover Effects</h1>
+
+<!-- 1 Basic Hover Color -->
+<div class="box color-change">
+    Hover to Change Color
+</div>
+
+<!-- 2 Grow on Hover -->
+<div class="box grow">
+    Hover to Grow
+</div>
+
+<!-- 3 Multiple Changes -->
+<div class="box multi-hover">
+    Hover for Color, Size & Shadow
+</div>
+
+<!-- 4 Reveal Content -->
+<div class="box reveal">
+    Hover to Reveal Text
+    <p class="hidden-text">Surprise! Hidden content appears.</p>
+</div>
+
+</body>
+</html>
