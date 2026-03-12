@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Methods Assignment</title>
+
+    <!-- Internal CSS -->
+    <style>
+        .internal {
+            background-color: lightgreen;
+            color: black;
+            padding: 20px;
+            margin: 20px;
+            border: 3px solid green;
+        }
+    </style>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1 style="text-align:center;">Three Types of CSS</h1>
+
+<!-- Inline CSS Section -->
+<div style="background-color: lightblue; color:black; padding:20px; margin:20px; border:3px solid blue;">
+    <h2>Inline CSS</h2>
+    <p>
+        This section uses Inline CSS. The style is written directly inside the HTML tag.
+    </p>
+</div>
+
+<!-- Internal CSS Section -->
+<div class="internal">
+    <h2>Internal CSS</h2>
+    <p>
+        This section uses Internal CSS. The style is written inside the &lt;style&gt; tag in the head section.
+    </p>
+</div>
+
+<!-- External CSS Section -->
+<div class="external">
+    <h2>External CSS</h2>
+    <p>
+        This section uses External CSS. The styling comes from a separate CSS file called style.css.
+    </p>
+</div>
+
+</body>
+</html>
