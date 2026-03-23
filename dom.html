@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Manipulation</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.container{
+    background: white;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 id="heading">Original Heading</h2>
+
+<p id="para">This is the original paragraph text.</p>
+
+<button onclick="changeContent()">Click to Change</button>
+
+</div>
+
+<script>
+
+function changeContent(){
+
+    // Change text using getElementById
+    document.getElementById("heading").innerHTML = "Text Changed Successfully";
+
+    // Change paragraph content
+    document.getElementById("para").innerHTML = "This paragraph content has been updated.";
+
+    // Change style (color and font size)
+    document.getElementById("para").style.color = "blue";
+    document.getElementById("para").style.fontSize = "22px";
+}
+
+</script>
+
+</body>
+</html>
