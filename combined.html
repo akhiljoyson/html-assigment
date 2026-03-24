@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Combined JS Assignment</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container{
+    background: white;
+    width: 420px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+input{
+    padding: 8px;
+    width: 80%;
+    margin-top: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+p{
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>JavaScript Events + Async</h2>
+
+<!-- Typing Input -->
+<input type="text" id="nameInput" placeholder="Type something">
+<p id="typingOutput"></p>
+
+<!-- Button Click -->
+<button id="clickBtn">Click Me</button>
+<p id="clickOutput"></p>
+
+<!-- Form -->
+<form id="myForm">
+    <input type="text" id="formInput" placeholder="Enter value" required>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<p id="formOutput"></p>
+
+<hr>
+
+<!-- Async Section -->
+<p id="syncOutput"></p>
+<p id="timeoutOutput"></p>
+<p id="counterOutput"></p>
+
+</div>
+
+<script>
+
+/* Typing Event */
+document.getElementById("nameInput").addEventListener("input", function(){
+    document.getElementById("typingOutput").innerHTML =
+    "Typing: " + this.value;
+});
+
+
+/* Button Click Event */
+document.getElementById("clickBtn").addEventListener("click", function(){
+    document.getElementById("clickOutput").innerHTML =
+    "Button Clicked!";
+});
+
+
+/* Form Submit Event */
+document.getElementById("myForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let value = document.getElementById("formInput").value;
+
+    document.getElementById("formOutput").innerHTML =
+    "Form Submitted: " + value;
+});
+
+
+/* Synchronous */
+document.getElementById("syncOutput").innerHTML =
+"Synchronous: Runs immediately";
+
+
+/* setTimeout (2 seconds) */
+setTimeout(function(){
+    document.getElementById("timeoutOutput").innerHTML =
+    "Async: Message after 2 seconds";
+}, 2000);
+
+
+/* setInterval (Counter every 1 sec) */
+let count = 1;
+
+let interval = setInterval(function(){
+    document.getElementById("counterOutput").innerHTML =
+    "Counter: " + count;
+
+    count++;
+
+    if(count > 5){
+        clearInterval(interval);
+    }
+}, 1000);
+
+</script>
+
+</body>
+</html>
