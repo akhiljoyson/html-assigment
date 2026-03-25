@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Operations</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container{
+    background: white;
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+p{
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Array Operations</h2>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+/* Create Array */
+let fruits = ["Apple", "Banana", "Mango"];
+
+/* push() → add at end */
+fruits.push("Orange");
+
+/* pop() → remove last */
+fruits.pop();
+
+/* unshift() → add at beginning */
+fruits.unshift("Grapes");
+
+/* shift() → remove first */
+fruits.shift();
+
+/* Print using for loop */
+let result = "Array Elements: <br>";
+
+for(let i = 0; i < fruits.length; i++){
+    result += fruits[i] + "<br>";
+}
+
+document.getElementById("output").innerHTML = result;
+
+</script>
+
+</body>
+</html>
