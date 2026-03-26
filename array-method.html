@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Methods</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container{
+    background: white;
+    width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+p{
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Array Methods Example</h2>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+/* Original Array */
+let numbers = [2, 5, 8, 12, 15];
+
+/* map() → double all numbers */
+let doubled = numbers.map(num => num * 2);
+
+/* filter() → get even numbers */
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+
+/* reduce() → sum of array */
+let sum = numbers.reduce((total, num) => total + num, 0);
+
+/* find() → first number > 10 */
+let greaterThan10 = numbers.find(num => num > 10);
+
+/* includes() → check value */
+let hasFive = numbers.includes(5);
+
+/* Display Output */
+document.getElementById("output").innerHTML =
+"Original Array: " + numbers + "<br><br>" +
+
+"Doubled (map): " + doubled + "<br><br>" +
+
+"Even Numbers (filter): " + evenNumbers + "<br><br>" +
+
+"Sum (reduce): " + sum + "<br><br>" +
+
+"First number > 10 (find): " + greaterThan10 + "<br><br>" +
+
+"Includes 5: " + hasFive;
+
+</script>
+
+</body>
+</html>
