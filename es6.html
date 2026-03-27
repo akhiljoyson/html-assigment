@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ES6 Features</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container{
+    background: white;
+    width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+p{
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>JavaScript ES6 Features</h2>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+/* let and const */
+let name = "Akhil";
+const age = 22;
+
+/* Template literals */
+let message = `Name: ${name}, Age: ${age}`;
+
+/* Default parameter */
+function greet(user = "Guest"){
+    return `Hello, ${user}`;
+}
+
+/* Destructuring (Array) */
+let numbers = [10, 20, 30];
+let [a, b, c] = numbers;
+
+/* Destructuring (Object) */
+let person = { city: "Hyderabad", country: "India" };
+let { city, country } = person;
+
+/* Spread operator (copy array) */
+let newNumbers = [...numbers];
+
+/* Rest operator */
+function sum(...nums){
+    return nums.reduce((total, n) => total + n, 0);
+}
+
+/* Arrow function */
+const multiply = (x, y) => x * y;
+
+/* Class */
+class Student{
+    constructor(name){
+        this.name = name;
+    }
+
+    greet(){
+        return `Hello, I am ${this.name}`;
+    }
+}
+
+let student1 = new Student("Akhil");
+
+/* Display Output */
+document.getElementById("output").innerHTML =
+message + "<br><br>" +
+
+greet() + "<br>" +
+greet("John") + "<br><br>" +
+
+`Destructured Array: ${a}, ${b}, ${c}<br>` +
+`Destructured Object: ${city}, ${country}<br><br>` +
+
+`Copied Array: ${newNumbers}<br>` +
+
+`Sum (Rest): ${sum(1,2,3,4)}<br>` +
+
+`Multiply (Arrow): ${multiply(5,3)}<br><br>` +
+
+student1.greet();
+
+</script>
+
+</body>
+</html>
