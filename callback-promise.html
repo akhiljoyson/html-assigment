@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Callback & Promise</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container{
+    background: white;
+    width: 420px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+p{
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Callback and Promise Example</h2>
+
+<p id="callbackOutput"></p>
+<p id="promiseOutput"></p>
+
+</div>
+
+<script>
+
+/* Callback Function */
+function greet(name, callback){
+    let message = "Hello, " + name;
+    callback(message);
+}
+
+function display(msg){
+    document.getElementById("callbackOutput").innerHTML = msg;
+}
+
+/* Call function with callback */
+greet("Akhil", display);
+
+
+/* Promise Creation */
+let myPromise = new Promise(function(resolve, reject){
+
+    let success = true; // change to false to test reject
+
+    if(success){
+        resolve("Promise Resolved Successfully");
+    }else{
+        reject("Promise Rejected");
+    }
+});
+
+
+/* Handle Promise */
+myPromise
+.then(function(result){
+    document.getElementById("promiseOutput").innerHTML = result;
+})
+.catch(function(error){
+    document.getElementById("promiseOutput").innerHTML = error;
+});
+
+</script>
+
+</body>
+</html>
