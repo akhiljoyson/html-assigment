@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Async Await Example</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container{
+    background: white;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+p{
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Async / Await Example</h2>
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+/* Create Promise */
+function myPromise(){
+    return new Promise(function(resolve, reject){
+
+        let success = true; // change to false to test reject
+
+        if(success){
+            resolve("Promise Resolved Successfully");
+        }else{
+            reject("Promise Rejected");
+        }
+    });
+}
+
+/* Async Function */
+async function handlePromise(){
+
+    try{
+        let result = await myPromise();
+        document.getElementById("output").innerHTML = result;
+    }
+    catch(error){
+        document.getElementById("output").innerHTML = error;
+    }
+
+}
+
+/* Call Function */
+handlePromise();
+
+</script>
+
+</body>
+</html>
